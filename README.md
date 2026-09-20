@@ -208,13 +208,15 @@ metric.
 
 **Feature importance**
 
-<img src="figures/feature_importance.png" alt="Feature importance of the quality model" width="600">
+<img width="962" height="615" alt="feature_importance" src="https://github.com/user-attachments/assets/b66b84a2-4b2c-42ab-b5cc-b43b40d4abd0" />
+
 
 Class imbalance (`imbalance_log_ratio`) is by far the strongest signal behind the predicted score. Outliers, zeros, and missing values contribute much smaller amounts.
 
 **Predicted vs actual**
 
-<img src="figures/predicted_vs_actual.png" alt="Predicted vs actual quality score on held-out datasets" width="600">
+<img width="752" height="701" alt="predicted_vs_actual" src="https://github.com/user-attachments/assets/9c22cebd-198d-445f-936a-4250fa9cc352" />
+
 
 Each dot is a held-out example. Points close to the dashed line are accurate predictions. Most datasets score near 100, and the model is less precise on lower-quality ones.
 
