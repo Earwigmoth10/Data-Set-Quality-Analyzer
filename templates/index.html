@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dataset Quality Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <h1>Grade your dataset</h1>
+    <p class="sub">Drop a CSV. Get a quality score, a letter grade, and exactly what's dragging it down, before it wrecks your model.</p>
+  </header>
+
+  <main>
+    <section id="upload-panel" class="panel">
+      <div class="dropzone" id="dropzone">
+        <span class="mark mark-tl" aria-hidden="true"></span>
+        <span class="mark mark-tr" aria-hidden="true"></span>
+        <span class="mark mark-bl" aria-hidden="true"></span>
+        <span class="mark mark-br" aria-hidden="true"></span>
+
+        <div class="dropzone-content">
+          <svg class="dropzone-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 6v24M24 6l-9 9M24 6l9 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 32v6a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="dropzone-title">Drop CSV here</p>
+          <p class="dropzone-sub">or click to browse</p>
+        </div>
+
+        <input type="file" id="file-input" accept=".csv" aria-label="Choose a CSV file to grade">
+      </div>
+      <p class="file-hint" id="file-hint">One file, comma-separated, first row as headers.</p>
+    </section>
+
+    <section id="loading-panel" class="panel hidden" aria-live="polite">
+      <p class="loading-text">Reading <span id="loading-filename"></span>&hellip;</p>
+      <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+    </section>
+
+    <section id="error-panel" class="panel hidden" role="alert">
+      <p class="error-label">Couldn't grade this file</p>
+      <p class="error-text" id="error-text"></p>
+      <button type="button" class="btn" id="error-retry">Try another file</button>
+    </section>
+
+    <section id="report-panel" class="panel hidden">
+      <div class="report-head">
+        <p class="report-filename" id="report-filename"></p>
+        <button type="button" class="btn" id="analyze-another">Analyze another file</button>
+      </div>
+
+      <div class="grade-block">
+        <div class="grade-circle" id="grade-circle">
+          <svg class="grade-ring" viewBox="0 0 160 160" aria-hidden="true">
+            <circle class="grade-ring-track" cx="80" cy="80" r="72"></circle>
+            <circle class="grade-ring-fill" id="grade-ring-fill" cx="80" cy="80" r="72"></circle>
+          </svg>
+          <span class="grade-letter" id="grade-letter">B</span>
+        </div>
+        <div class="score-meta">
+          <p class="score-number"><span id="score-value">0</span><span class="score-max">/100</span></p>
+          <p class="score-source" id="score-source"></p>
+          <dl class="stats" id="stats"></dl>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>Where points were lost</h2>
+        <ul class="penalty-list" id="penalty-list"></ul>
+      </div>
+
+      <div class="block">
+        <h2>Notes in the margin</h2>
+        <ul class="issue-list" id="issue-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Files aren't saved after grading.</p>
+  </footer>
+
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
