@@ -16,7 +16,7 @@ how much a dataset's quality actually affects downstream model accuracy.
 ## Screenshot
 
 <!-- Add your screenshot to a `screenshots/` folder and update the path below -->
-<img width="458" height="389" alt="q" src="https://github.com/user-attachments/assets/63259f88-4b02-4aae-b9d4-a77bcb4ed72d" />
+<img width="741" height="408" alt="qw" src="https://github.com/user-attachments/assets/6a51c7d6-4351-4812-947e-58defa7192a7" />
 <img width="727" height="386" alt="qq" src="https://github.com/user-attachments/assets/52179f32-b465-4cfb-976e-de47a715095f" />
 <img width="716" height="295" alt="qqq" src="https://github.com/user-attachments/assets/083326e9-47f3-454f-83aa-7a5bf1ca9400" />
 
