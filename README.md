@@ -11,11 +11,15 @@ checks against an uploaded dataset — missing values, duplicates, outliers,
 suspicious zeros, class imbalance, useless columns, correlated features —
 and combines them into a single score, using a model trained to predict
 how much a dataset's quality actually affects downstream model accuracy.
+<img width="1312" height="1199" alt="ChatGPT Image Sep 20, 2026, 10_22_31 AM" src="https://github.com/user-attachments/assets/9c272a83-c3cc-4dde-8ae2-b119c3e6396b" />
 
 ## Screenshot
 
 <!-- Add your screenshot to a `screenshots/` folder and update the path below -->
-![App screenshot](screenshots/app-screenshot.png)
+<img width="458" height="389" alt="q" src="https://github.com/user-attachments/assets/63259f88-4b02-4aae-b9d4-a77bcb4ed72d" />
+<img width="727" height="386" alt="qq" src="https://github.com/user-attachments/assets/52179f32-b465-4cfb-976e-de47a715095f" />
+<img width="716" height="295" alt="qqq" src="https://github.com/user-attachments/assets/083326e9-47f3-454f-83aa-7a5bf1ca9400" />
+
 
 ## Overview
 
@@ -269,3 +273,7 @@ Near-term additions on top of Phase 8:
 ## License
 
 Add your license of choice here (MIT, Apache 2.0, etc.).
+
+## Author
+
+**Laiba Aamir**
